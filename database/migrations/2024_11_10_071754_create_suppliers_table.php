@@ -19,6 +19,7 @@ return new class extends Migration
             $table -> float('rating', 3,2)-> nullable();
             $table -> json('industry_specific') -> nullable();
             $table -> timestamps();
+            $table -> softDeletes();
         });
     }
 
