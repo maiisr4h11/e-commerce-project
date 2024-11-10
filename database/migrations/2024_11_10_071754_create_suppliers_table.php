@@ -13,7 +13,12 @@ return new class extends Migration
     {
         Schema::create('suppliers', function (Blueprint $table) {
             $table->id();
-            $table->timestamps();
+            $table->string('name');
+            $table->string('contact_info');
+            $table->string('category');
+            $table -> float('rating', 3,2)-> nullable();
+            $table -> json('industry_specific') -> nullable();
+            $table -> timestamps();
         });
     }
 
